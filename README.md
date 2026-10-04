@@ -1,10 +1,15 @@
-# compliance-gap-agents
+# compliance-agents
 
-A Claude Code two-stage gap analysis toolkit for compliance frameworks.
+A collection of AI agents and skills for compliance work: a two-stage framework gap analysis toolkit and a third-party risk assessment skill based on SOC reports.
 
 Bring your own licensed (or public-domain) control catalogs. This repository ships the agent prompts, workflow docs, and folder layout — **not** copyrighted ISO or NIST control text.
 
-## What this is
+## What's in this repo
+
+- [`gap-analysis/`](gap-analysis/) — the two-stage framework gap analysis toolkit described below.
+- [`tprm/`](tprm/) — a skill and checklist template for third-party risk assessments based on a provider's SOC 2 report. See [`tprm/README.md`](tprm/README.md).
+
+## Gap analysis: what this is
 
 Two Claude Code custom agents that run a framework gap analysis in stages:
 
@@ -18,6 +23,7 @@ The specialist never guesses: a control without adequate evidence is marked **In
 ## Layout
 
 ```
+tprm/                       # SOC 2 third-party risk review skill + checklist template
 gap-analysis/
   organization-profile.md   # Fill in before first run (applicability context)
   controls/                 # YOU supply licensed/public-domain control markdown here
